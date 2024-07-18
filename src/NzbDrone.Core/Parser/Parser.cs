@@ -60,7 +60,10 @@ namespace NzbDrone.Core.Parser
 
                 // Episodes with airdate before title (2018-10-12, 20181012) (Strict pattern to avoid false matches)
                 new Regex(@"^(?<airyear>19[6-9]\d|20\d{2})[-_]?(?<airmonth>[0-1][0-9])[-_]?(?<airday>[0-3][0-9])",
-                    RegexOptions.IgnoreCase | RegexOptions.Compiled)
+                    RegexOptions.IgnoreCase | RegexOptions.Compiled),
+
+                // custom
+                new Regex(@"^(?<title>.+?)?[-_. ]+(?<airyear>\d{2}|\d{4})[-_. ]+(?<airmonth>[0-1][0-9])[-_. ]+(?<airday>[0-3][0-9])[-_. ]+(?<episodetitle>.+?)?[-_. ]+(?<performer>.+?)?(?<qual>\[.+\])", RegexOptions.IgnoreCase | RegexOptions.Compiled)
             };
 
         private static readonly Regex[] SpecialEpisodeTitleRegex = new Regex[]
