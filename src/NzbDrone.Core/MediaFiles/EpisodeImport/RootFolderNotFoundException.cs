@@ -20,6 +20,7 @@ namespace NzbDrone.Core.MediaFiles.EpisodeImport
         {
         }
 
+        [Obsolete("Obsolete")]
         protected RootFolderNotFoundException(SerializationInfo info, StreamingContext context)
             : base(info, context)
         {

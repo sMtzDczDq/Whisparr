@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.Security.Claims;
 using System.Text.Encodings.Web;
@@ -11,6 +12,7 @@ namespace Whisparr.Http.Authentication
 {
     public class NoAuthenticationHandler : AuthenticationHandler<AuthenticationSchemeOptions>
     {
+        [Obsolete("Obsolete")]
         public NoAuthenticationHandler(IOptionsMonitor<AuthenticationSchemeOptions> options,
             ILoggerFactory logger,
             UrlEncoder encoder,

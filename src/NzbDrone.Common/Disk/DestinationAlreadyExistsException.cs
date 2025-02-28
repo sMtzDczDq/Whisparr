@@ -25,6 +25,7 @@ namespace NzbDrone.Common.Disk
         {
         }
 
+        [Obsolete("Obsolete")]
         protected DestinationAlreadyExistsException(SerializationInfo info, StreamingContext context)
             : base(info, context)
         {

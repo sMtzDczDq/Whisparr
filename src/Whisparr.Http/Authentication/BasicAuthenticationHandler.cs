@@ -17,6 +17,7 @@ namespace Whisparr.Http.Authentication
     {
         private readonly IAuthenticationService _authService;
 
+        [Obsolete("Obsolete")]
         public BasicAuthenticationHandler(IAuthenticationService authService,
             IOptionsMonitor<AuthenticationSchemeOptions> options,
             ILoggerFactory logger,
@@ -71,7 +72,7 @@ namespace Whisparr.Http.Authentication
 
         protected override Task HandleChallengeAsync(AuthenticationProperties properties)
         {
-            Response.Headers.Add("WWW-Authenticate", $"Basic realm=\"{BuildInfo.AppName}\"");
+            Response.Headers["WWW-Authenticate"] = $"Basic realm=\"{BuildInfo.AppName}\"";
             Response.StatusCode = 401;
             return Task.CompletedTask;
         }
