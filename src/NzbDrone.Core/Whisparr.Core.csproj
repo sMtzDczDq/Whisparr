@@ -7,6 +7,14 @@
     <PackageReference Include="Diacritical.Net" />
     <PackageReference Include="MailKit" />
     <PackageReference Include="Microsoft.AspNetCore.Cryptography.KeyDerivation" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
     <PackageReference Include="Servarr.FFMpegCore" />
     <PackageReference Include="Servarr.FFprobe" />
     <PackageReference Include="Microsoft.Extensions.DependencyInjection" />
